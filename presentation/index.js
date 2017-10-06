@@ -79,7 +79,7 @@ const images = {
 preloader(images);
 
 const colors = {
-  primary: '#191c20',
+  primary: '#1b1d24',
   secondary: '#F3F4F4',
   tertiary: '#96DBE4',
   quartenary: '#93DAAB',
@@ -131,7 +131,7 @@ export default class Presentation extends Component {
         </Slide>
         <Slide
           transition={['fade']}
-          bgImage={images.peggy}
+          bgColor={colors.primary}
           notes={notes.intro2}
         >
           <Text
@@ -140,7 +140,7 @@ export default class Presentation extends Component {
             textSize={fontSize.medium}
             style={{ textShadow: '2px 2px 2px #010207' }}
           >
-            Shalom! 🙋 I'm Peggy.
+            Hi! 🙋 I'm Peggy.
           </Text>
           <Link href="https://twitter.com/peggyrayzis">
             <Text
@@ -212,29 +212,29 @@ export default class Presentation extends Component {
         >
           <List>
             <ListItem textColor="tertiary">
-              <span style={{ color: colors.secondary }}>PanResponder:</span>
-              {' '}
+              <span style={{ color: colors.secondary }}>
+                PanResponder:
+              </span>{' '}
               Sophisticated gestures
             </ListItem>
             <Appear>
               <ListItem textColor="tertiary">
-                <span style={{ color: colors.secondary }}>StyleSheet:</span>
-                {' '}
+                <span style={{ color: colors.secondary }}>
+                  StyleSheet:
+                </span>{' '}
                 Flexible CSS in JS solution
               </ListItem>
             </Appear>
             <Appear>
               <ListItem textColor="tertiary">
-                <span style={{ color: colors.secondary }}>Animated:</span>
-                {' '}
+                <span style={{ color: colors.secondary }}>Animated:</span>{' '}
                 Declarative & configurable
               </ListItem>
             </Appear>
             <Appear>
               <ListItem textColor="tertiary">
-                <span style={{ color: colors.secondary }}>Yoga:</span>
-                {' '}
-                Flexbox by default
+                <span style={{ color: colors.secondary }}>Yoga:</span> Flexbox
+                by default
               </ListItem>
             </Appear>
           </List>
@@ -285,7 +285,8 @@ export default class Presentation extends Component {
           <Appear>
             <Text textColor="secondary" lineHeight={1.3} textSize="2.6em">
               <p style={{ textShadow: '2px 2px 3px #010207' }}>
-                Why are we building modern applications with primitives stuck in the 90s?
+                Why are we building modern applications with primitives stuck in
+                the 90s?
               </p>
             </Text>
           </Appear>
@@ -310,12 +311,9 @@ export default class Presentation extends Component {
           notes={notes.crossPlatform}
         >
           <Text textColor="tertiary" lineHeight={1.2} textSize="2em">
-            How do we bring
-            {' '}
-            <span style={{ color: colors.secondary }}>React Native</span>
-            {' '}
-            style application development to the
-            {' '}
+            How do we bring{' '}
+            <span style={{ color: colors.secondary }}>React Native</span> style
+            application development to the{' '}
             <span style={{ color: colors.secondary }}>web</span>
             ?
           </Text>
@@ -346,7 +344,9 @@ export default class Presentation extends Component {
                 'Published via shared NPM package',
                 '"Write once, render anywhere"',
               ].map(item => (
-                <ListItem key={item} textSize="1.2em">{item}</ListItem>
+                <ListItem key={item} textSize="1.2em">
+                  {item}
+                </ListItem>
               ))}
             </List>
           </div>
@@ -365,7 +365,9 @@ export default class Presentation extends Component {
                 'Comprised of universal components',
                 '"Write once, run anywhere"',
               ].map(item => (
-                <ListItem key={item} textSize="1.2em">{item}</ListItem>
+                <ListItem key={item} textSize="1.2em">
+                  {item}
+                </ListItem>
               ))}
             </List>
             <Image width="500px" src={images.universalApplication} />
@@ -398,7 +400,8 @@ export default class Presentation extends Component {
             </Link>
             <Link href="https://reactnyc-universal-components.surge.sh/">
               <Text textColor="secondary" lineHeight={1.6} textSize="1.3em">
-                *for a comparison of all 3, check out the first iteration of this talk
+                *for a comparison of all 3, check out the first iteration of
+                this talk
               </Text>
             </Link>
           </div>
@@ -419,13 +422,13 @@ export default class Presentation extends Component {
               </Text>
             </Link>
             <Text textColor="tertiary" lineHeight={1.6} textSize="1.7em">
-              <span style={{ color: colors.secondary }}>APIs: 21/43</span>
-              {' '}
-              (9 missing are iOS/Android specific)
+              <span style={{ color: colors.secondary }}>APIs: 21/43</span> (9
+              missing are iOS/Android specific)
             </Text>
             <Text textColor="tertiary" lineHeight={1.6} textSize="1.7em">
-              <span style={{ color: colors.secondary }}>Components: 22/36</span>
-              {' '}
+              <span style={{ color: colors.secondary }}>
+                Components: 22/36
+              </span>{' '}
               (13 missing are iOS/Android specific)
             </Text>
             <Text textColor="secondary" lineHeight={1.6} textSize="1.7em">
@@ -443,8 +446,7 @@ export default class Presentation extends Component {
             lineHeight={1.2}
             textSize={fontSize.medium}
           >
-            Is react-native-web
-            {' '}
+            Is react-native-web{' '}
             <span style={{ color: colors.secondary }}>production ready</span>
             ?
           </Text>
@@ -550,15 +552,16 @@ export default class Presentation extends Component {
             textSize={fontSize.medium}
             textColor="secondary"
           >
-            With some Webpack wizardry, you can use React Native libraries on the web!
+            With some Webpack wizardry, you can use React Native libraries on
+            the web!
           </Text>
         </Slide>
         <Slide transition={['fade']} notes={notes.rnModules}>
           <Text lineHeight={1.2} textSize="1.5em" textColor="secondary">
-            Alias react-native-web
+            Add the react-native-web Babel plugin
           </Text>
           <CodePane
-            style={{ minWidth: 0, maxWidth: 900, fontSize: '0.7em' }}
+            style={{ minWidth: 0, maxWidth: 900, fontSize: '0.8em' }}
             lang="jsx"
             source={Webpack.alias}
           />
@@ -593,11 +596,8 @@ export default class Presentation extends Component {
             lineHeight={1.2}
             textSize={fontSize.medium}
           >
-            How do I know if a React Native library is
-            {' '}
-            <span style={{ color: colors.secondary }}>
-              web compatible
-            </span>
+            How do I know if a React Native library is{' '}
+            <span style={{ color: colors.secondary }}>web compatible</span>
             ?
           </Text>
         </Slide>
@@ -700,12 +700,8 @@ export default class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor="primary" notes={notes.storybook1}>
           <Text textColor="tertiary" lineHeight={1.2} textSize="2em">
-            How do I
-            {' '}
-            <span style={{ color: colors.secondary }}>
-              test
-            </span>
-            {' '}universal components?
+            How do I <span style={{ color: colors.secondary }}>test</span>{' '}
+            universal components?
           </Text>
         </Slide>
         <Slide transition={['fade']} notes={notes.storybook2}>
@@ -785,9 +781,8 @@ export default class Presentation extends Component {
             textColor="tertiary"
             textSize={fontSize.medium}
           >
-            <span style={{ color: colors.secondary }}>Universal data</span>
-            {' '}
-            for your universal components 😍
+            <span style={{ color: colors.secondary }}>Universal data</span> for
+            your universal components 😍
           </Text>
         </Slide>
         <Slide bgColor="primary" transition={['fade']} notes={notes.apollo3}>
@@ -843,7 +838,8 @@ export default class Presentation extends Component {
           <Image width="60%" src={images.svgs} />
           <Link href="https://github.com/godaddy/svgs">
             <Text textSize="1.2em" lineHeight={1.6} textColor="secondary">
-              *Check out svgs, a compat layer between browser SVG elements & react-native-svg
+              *Check out svgs, a compat layer between browser SVG elements &
+              react-native-svg
             </Text>
           </Link>
         </Slide>
@@ -866,11 +862,9 @@ export default class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor="primary" notes={notes.takeaway}>
           <Text textColor="tertiary" lineHeight={1.2} textSize="2em">
-            Open your mind to
-            {' '}
-            <span style={{ color: colors.secondary }}>new</span>
-            {' '}
-            platforms and possibilities.
+            Open your mind to{' '}
+            <span style={{ color: colors.secondary }}>new</span> platforms and
+            possibilities.
           </Text>
         </Slide>
         <Slide
@@ -891,7 +885,6 @@ export default class Presentation extends Component {
               width: '100%',
             }}
           >
-
             <Link href="https://github.com/peggyrayzis">
               <Image margin="30px" src={images.github} width="100px" />
             </Link>

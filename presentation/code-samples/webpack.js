@@ -1,17 +1,14 @@
 const webpack = {
   alias: `
-    module: {
-      resolve: {
-        alias: {
-          'react-native': path.join(
-            __dirname,
-            'node_modules',
-            'react-native-web',
-          ),
-        },
-        extensions: ['.web.js', '.js']
-      }
-    }`,
+  {
+    "plugins": [
+      "react-native-web/babel"
+    ],
+    "presets": [
+      "react-native"
+    ]
+  }
+  `,
   babel: `
   {
     "presets": ["react-native"],

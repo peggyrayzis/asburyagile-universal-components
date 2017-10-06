@@ -1,15 +1,16 @@
 const notes = {
   intro1: `
-    Hi everyone! Today we’re going to talk about something really exciting that’s generating a lot of buzz in the community.
-    Over the next 25 minutes, you’re going to learn how to write a component once & render it anywhere -
+    Hi everyone! Today we’re going to talk about something really fun that’s generating a lot of buzz in the community.
+    Over the next 30 minutes, you’re going to learn how to write a component once & render it anywhere -
     i’m talking web, native, VR, sketch, & more -- without changing any lines of code.
   `,
   intro2: `
     Before we get started, I wanted to introduce myself.
-    Shalom! My name is Peggy Rayzis. You can find me on Twitter, Github, and Medium at my handle there.
+    Hi! My name is Peggy Rayzis. You can find me on Twitter, Github, and Medium at my handle there.
     <br />
     <br />
-    As you can see, I've had an awesome time in Israel so far! I even made some new friends on the tour.
+    I'm really excited to be speaking at the Jersey shore today because I'm proud to be a born & raised Jersey girl!
+    I grew up in South Jersey, and I love my pork roll, Wawa, & the Philadelphia Eagles.
   `,
   apolloIntro: `
     I work at Meteor Development Group on the Apollo team building open source GraphQL tools. Previously, I was working at Major League Soccer as an engineer on the UI team.
@@ -164,7 +165,8 @@ const notes = {
   everything here is built with universal components
   `,
   accessibility: `
-  one of the things that might have concerned you is that react native web renders to divs and spans, which is a huge concern for accessibility reasons because there is no way to preserve semantic markup for screenreaders. there are built in accessibility APIs to make sure you can apply the correct ARIA role to your DOM elements
+  one of the things that might have concerned you is that react native web renders to divs and spans, which is a huge concern for accessibility reasons because there is no way to preserve semantic markup for screenreaders.
+  there are built in accessibility APIs to make sure you can apply the correct ARIA role to your DOM elements
   `,
   perf: `
   react native web is also performant. RNW's StyleSheet implementation is on par or faster than most popular CSS in JS libraries today
@@ -180,7 +182,8 @@ const notes = {
     The reason why all of this is possible is react-native-web's almost complete feature parity with React Native. let's dive into some code!
   `,
   rnModules: `
-    first, you will want to alias react-native-web to react-native in your project. you can achieve this with either webpack or babel-plugin-module-resolver
+    first, you will want to install the react-native-web babel plugin. this will alias react-native-web to react native for you
+    it also has the benefit of stripping out any modules you aren't using in you project
   `,
   rnModules1: `
     since React Native modules are in ES6, you're going to have to compile them with Babel in your Webpack build.
@@ -197,7 +200,6 @@ const notes = {
   webCompatible2: `
   the one stop shop for determining web compatibility is native directory. recently, i partnered with the awesome folks at expo to add web compatibility features to native.directory, their curated list of RN libraries
   all you need to do is check the filter to find what you're looking for!
-  shoutout to jim lee, who was able to execute this feature super quickly before my talk :)
   in the upcoming weeks, i'm going to perform an audit to add more web compatible libraries to the list
   but i need your help! if you're using react native libraries on the web that aren't listed, PLEASE send a pull request to add it.
   `,
