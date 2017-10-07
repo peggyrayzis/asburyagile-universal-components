@@ -26,7 +26,7 @@ If you have any questions about the presentation or universal components, please
 - [The Road to Universal Components at MLS, Kurt Kemple](https://labs.mlssoccer.com/the-road-to-universal-components-at-major-league-soccer-eeb7aac27e6c)
 
 ## Universal Components Starter Packs
-- [Universal Components Exmaple](https://github.com/kkemple/universal-components-example)
+- [Universal Components Example](https://github.com/kkemple/universal-components-example)
 
 ## Universal Application Starter Packs
 - [Create XP App](https://github.com/react-native-training/create-xp-app)
